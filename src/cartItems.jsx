@@ -1,6 +1,6 @@
 import CartItem from "./CartItem"
 
-export default function CartItems({cartData, setCartData}) {
+export default function CartItems({cartData, setCartData, openDialog}) {
     const totalPrice = Object.keys(cartData).map(key => cartData[key].count*cartData[key].price).reduce((a,b) => a + b)
     
      return (
@@ -24,7 +24,7 @@ export default function CartItems({cartData, setCartData}) {
                 <img src="public\assets\images\icon-carbon-neutral.svg" alt="carbon free icon" className="img" />
                 <p className="carbon-free-msg-txt clr-rose-500">This is a <strong>carbon-neutral</strong> delivery</p>
             </div>
-            <button className="btn confirm-order-btn clr-rose-50">Confirm Order</button>
+            <button onClick={openDialog} className="btn confirm-order-btn clr-rose-50">Confirm Order</button>
         </>
      )
 }

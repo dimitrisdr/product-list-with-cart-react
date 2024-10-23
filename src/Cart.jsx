@@ -1,7 +1,7 @@
 import CartItemEmpty from "./CartItemEmpty"
 import CartItems from "./cartItems"
 
-export default function Cart({cartData, setCartData}) {
+export default function Cart({cartData, setCartData, openDialog}) {
     const totalCount = Object.keys(cartData).map(key=> cartData[key].count).reduce((a,b) => a+b)
 
     return (
@@ -11,7 +11,7 @@ export default function Cart({cartData, setCartData}) {
                 <span className="cart-values"> ({totalCount})</span>
             </h2>
             {totalCount === 0 &&  <CartItemEmpty />}
-            {totalCount !== 0 && <CartItems cartData={cartData} setCartData={setCartData}/>}
+            {totalCount !== 0 && <CartItems cartData={cartData} setCartData={setCartData} openDialog={openDialog}/>}
             
         </aside>
     )

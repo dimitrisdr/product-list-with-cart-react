@@ -1,9 +1,11 @@
-export default function Dialog({cartData, setCartData}) {
+export default function Dialog({cartData, setCartData, dialogRef, closeDialog}) {
+
     return (
-    <div>
-      <dialog className="modal">
-        <p>Hello! I'm open by default without modal behavior</p>
-      </dialog>
-    </div>
+    <dialog ref={dialogRef} className="dialog">
+        <div className="dialog-content">
+            <p>Hello! I'm open by default without modal behavior</p>
+            <button className="btn close-btn" onClick={closeDialog} >Close Modal</button>
+        </div>
+    </dialog>
     )
 }

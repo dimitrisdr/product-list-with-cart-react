@@ -4,13 +4,24 @@ import Cart from './Cart.jsx'
 import Dialog from './dialog.jsx'
 import data from '../data.json'
 import { useState } from 'react'
+import { useRef } from "react"
 
 const startData = {}
 data.forEach(el => startData[el.name] = {count:0, price:el.price})
 
 function App() {
+
   const [cartData, setCartData] = useState(startData)
-  
+  const dialogRef = useRef()
+
+  function openDialog() {
+     dialogRef.current.showModal()
+  }
+
+  function closeDialog() {
+    dialogRef.current.close()
+  }
+
   return (
     <>
       <main className="main grid-item" style={{'--gap':'1.5rem'}}>
@@ -25,9 +36,10 @@ function App() {
                                           })}
         </section>
       </main>
-      <Cart cartData = {cartData} setCartData={setCartData} />
-      <Dialog cartData={cartData} setCartData={setCartData} />
+      <Cart cartData = {cartData} setCartData={setCartData} openDialog={openDialog} />
+      <Dialog cartData={cartData} setCartData={setCartData} dialogRef={dialogRef} closeDialog={closeDialog}/>
     </>
+    
   )
 }
 
