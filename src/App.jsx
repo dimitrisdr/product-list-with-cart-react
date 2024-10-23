@@ -1,9 +1,10 @@
 import './App.css'
 import Card from './Card.jsx'
 import Cart from './Cart.jsx'
+import Dialog from './dialog.jsx'
 import data from '../data.json'
 import { useState } from 'react'
- 
+
 const startData = {}
 data.forEach(el => startData[el.name] = {count:0, price:el.price})
 
@@ -25,6 +26,7 @@ function App() {
         </section>
       </main>
       <Cart cartData = {cartData} setCartData={setCartData} />
+      <Dialog cartData={cartData} setCartData={setCartData} />
     </>
   )
 }
