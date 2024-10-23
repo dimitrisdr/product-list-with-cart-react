@@ -19,7 +19,7 @@
 }
 
 .card-main-img  {
-  border: 2px solid;
+  border: 3px solid;
   border-color: transparent;
   transition: border-color 1s ease ease-in;
 }
