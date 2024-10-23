@@ -9,8 +9,7 @@ data.forEach(el => startData[el.name] = {count:0, price:el.price})
 
 function App() {
   const [cartData, setCartData] = useState(startData)
-  console.log(cartData)
-
+  
   return (
     <>
       <main className="main grid-item" style={{'--gap':'1.5rem'}}>
@@ -25,7 +24,7 @@ function App() {
                                           })}
         </section>
       </main>
-      <Cart cartData = {cartData}  />
+      <Cart cartData = {cartData} setCartData={setCartData} />
     </>
   )
 }

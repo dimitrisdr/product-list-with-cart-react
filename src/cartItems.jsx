@@ -1,14 +1,19 @@
 import CartItem from "./CartItem"
 
-export default function CartItems({cartData}) {
+export default function CartItems({cartData, setCartData}) {
     const totalPrice = Object.keys(cartData).map(key => cartData[key].count*cartData[key].price).reduce((a,b) => a + b)
-
+    
      return (
         <>
             <div className="cart-items">
                 {Object.keys(cartData).map(key => {
                     if (cartData[key].count === 0) return
-                    return <CartItem key={key} name={key} price={cartData[key].price} count={cartData[key].count} />
+                    return <CartItem
+                     key={key}
+                     itemName={key} 
+                     cartData={cartData}
+                     setCartData={setCartData}
+                    />
                 })}
             </div>
             <div className="order-total flex-item">
