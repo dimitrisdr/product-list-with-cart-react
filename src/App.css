@@ -101,7 +101,7 @@
   border-radius:50%;
 }
 
-.confirm-order-btn {
+.confirm-order-btn, .close-btn {
   border-radius: 100vw;
   background-color: var(--Red);
   padding-block: 1rem;
@@ -120,6 +120,14 @@
   gap: 1rem;
 }
 
+.dialog {
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 999; /* Ensure it appears above other content */
+  padding: 1rem; 
+}
 
 
 @media screen and (min-width:48em) {
@@ -127,13 +135,13 @@
     font-size: 14px;
   }
 
-    #root {
-      grid-template-columns: 1fr 25rem;
-    }
+  #root {
+    grid-template-columns: 1fr 25rem;
+  }
 
-    .cards-container {
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    }
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
 
 }
 

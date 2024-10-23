@@ -15,7 +15,7 @@ function App() {
   const dialogRef = useRef()
 
   function openDialog() {
-     dialogRef.current.showModal()
+    dialogRef.current.showModal()
   }
 
   function closeDialog() {
@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <main className="main grid-item" style={{'--gap':'1.5rem'}}>
-        <h1 className="main-title fw-700 fs-900">Desserts</h1>
+        <h1 className="main-title fw-500 fs-900">Desserts</h1>
         <section className="cards-container grid-item" aria-label='Product cards'>
           {data.map((item, i) => {return <Card
                                           key={i} 
@@ -37,7 +37,11 @@ function App() {
         </section>
       </main>
       <Cart cartData = {cartData} setCartData={setCartData} openDialog={openDialog} />
-      <Dialog cartData={cartData} setCartData={setCartData} dialogRef={dialogRef} closeDialog={closeDialog}/>
+      <Dialog cartData={cartData} 
+              setCartData={setCartData} 
+              dialogRef={dialogRef} 
+              closeDialog={closeDialog}
+      />
     </>
     
   )
