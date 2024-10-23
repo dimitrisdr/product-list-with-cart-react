@@ -2,10 +2,11 @@
 export default function CartItem({itemName, cartData, setCartData}) {
     
     function handleClick() {
-        let newCartData = {...cartData}
-        delete newCartData[itemName]
-        setCartData(newCartData)
+        let newCartData = {...cartData};
+        newCartData[itemName].count = 0;
+        setCartData(newCartData);
     }
+    console.log(cartData)
     const {count, price} = cartData[itemName];
 
     return (
@@ -20,10 +21,7 @@ export default function CartItem({itemName, cartData, setCartData}) {
                     </div>
                 </div>
             </div>
-            <button
-             className="close-icon-btn grid-item"
-             onClick={handleClick}
-             >
+            <button className="close-icon-btn grid-item" onClick={handleClick}>
                 <img src="public\assets\images\icon-remove-item.svg" alt="close icon" className="img close-icon-img" />
             </button>
         </div>

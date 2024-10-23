@@ -1,10 +1,9 @@
 
 
-export default function AddToCartButton({setCount, cartData, setCartData, dataName}) {
+export default function AddToCartButton({cartData, setCartData, dataName}) {
     function handleClick(){
         const newCartData = {...cartData}
         newCartData[dataName].count = 1
-        setCount(1)   
         setCartData(newCartData)
     }
     return (

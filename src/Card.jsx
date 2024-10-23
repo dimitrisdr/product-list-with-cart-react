@@ -1,29 +1,24 @@
-import { useState } from "react"
 import AddToCartButton from "./AddToCartButton"
 import ProductsQuantityComp from "./ProductsQuantityComp"
 
 export default function Card({item, cartData, setCartData}) {
-    const [count, setCount] = useState(0);
-
+   
     return (
         <div className="card-container grid-item">
             <div className="card-main-info">
                 <picture className='img-container'>
                     <source srcSet={`${item.image.tablet}`} media="(min-width:35em)" /> 
                     <source srcSet={`${item.image.desktop}`} media="(min-width:45em)" />
-                    <img src= {`${item.image.mobile}`} alt="food" className={`img card-main-img  ${count !== 0 && 'border-red'}`} />
+                    <img src= {`${item.image.mobile}`} alt="food" className={`img card-main-img  ${cartData[item.name].count !== 0 && 'border-red'}`} />
                 </picture>
                 <div className="btn-container">
-                   {count !== 0 ? <ProductsQuantityComp 
-                                count={count} 
-                                setCount={setCount}
+                   {cartData[item.name].count !== 0 ? <ProductsQuantityComp 
                                 cartData={cartData}
                                 setCartData={setCartData}
                                 dataName = {item.name}
                                 />
                                 : 
                                 <AddToCartButton 
-                                    setCount={setCount}
                                     cartData={cartData}
                                     setCartData={setCartData}
                                     dataName = {item.name}
