@@ -125,10 +125,24 @@
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
-  z-index: 999; /* Ensure it appears above other content */
+  z-index: 999;
   padding: 1rem; 
+  width: 100%;
+  max-width: 400px;
+  padding-block: 2rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
 }
 
+
+.dialog .titles-container h2 {
+  max-width: 10ch;
+  line-height: 1.2;
+}
+
+::backdrop {
+  background-color: hsl(14 65% 9% / .4);
+}
 
 @media screen and (min-width:48em) {
   body {
@@ -142,6 +156,11 @@
   .cards-container {
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
+
+  .dialog .titles-container h2 {
+    max-width: 25ch;
+  }
+  
 
 }
 
