@@ -178,7 +178,7 @@
   }
 
   #root {
-    grid-template-columns: 1fr 23rem;
+    grid-template-columns: 1fr 24rem;
   }
 
   .cards-container {
