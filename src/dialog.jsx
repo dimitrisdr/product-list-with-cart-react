@@ -1,9 +1,6 @@
 import CartItems from "./cartItems"
-import { useContext } from "react"
-import { DataContext } from "./dataContext"
 
 export default function Dialog({dialogRef, dialogFunc}) {
-
 
     return (
     <dialog ref={dialogRef} className="dialog">

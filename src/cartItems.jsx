@@ -4,7 +4,7 @@ import { DataContext } from "./dataContext"
 
 export default function CartItems({ dialogFunc, orderConfirmed}) {
 
-    const {cartData, setCartData} = useContext(DataContext)
+    const {cartData} = useContext(DataContext)
 
     const totalPrice = Object.keys(cartData).map(key => cartData[key].count*cartData[key].price).reduce((a,b) => a + b)
      return (
@@ -13,12 +13,9 @@ export default function CartItems({ dialogFunc, orderConfirmed}) {
                 <div className="cart-items">
                     {Object.keys(cartData).map(key => {
                         if (cartData[key].count === 0) return
-                        return <CartItem
-                        key={key}
-                        itemName={key} 
-                        cartData={cartData}
-                        setCartData={setCartData}
-                        orderConfirmed={orderConfirmed}
+                        return <CartItem key={key}
+                                         itemName={key} 
+                                         orderConfirmed={orderConfirmed}
                         />
                     })}
                 </div>

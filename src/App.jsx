@@ -35,9 +35,9 @@ function App() {
               {data.map((item, i) => {return <Card key={i} item = {item} /> })}
             </section>
           </main>
-          <Cart cartData = {cartData} setCartData={setCartData} dialogFunc={openDialog} />
+          <Cart dialogFunc={openDialog} />
           <Dialog dialogRef={dialogRef} dialogFunc={closeDialog}/>
-        </DataContext.Provider>
+      </DataContext.Provider>
     </>
     
   )

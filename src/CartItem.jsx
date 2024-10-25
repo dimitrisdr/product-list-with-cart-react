@@ -1,5 +1,12 @@
+import { useRef } from "react"
+import { DataContext } from './dataContext.js'
+import { useContext } from "react"
 
-export default function CartItem({itemName, cartData, setCartData, orderConfirmed}) {
+
+export default function CartItem({itemName, orderConfirmed}) {
+
+    const {cartData, setCartData} = useContext(DataContext)
+
     function handleClick() {
         let newCartData = {...cartData};
         newCartData[itemName].count = 0;
