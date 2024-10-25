@@ -1,6 +1,10 @@
-import Card from "./Card"
+import { useContext } from "react";
+import { DataContext } from "./dataContext";
 
-export default function ProductsQuantityComp({cartData, setCartData, dataName}) {
+
+export default function ProductsQuantityComp({dataName}) {
+
+    const {cartData, setCartData} = useContext(DataContext)
     
     function handleClick(e) {
         const dir = e.target.closest('button').id  === 'incr'? 1 : -1 ;

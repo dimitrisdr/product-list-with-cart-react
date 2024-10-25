@@ -1,8 +1,12 @@
 import AddToCartButton from "./AddToCartButton"
 import ProductsQuantityComp from "./ProductsQuantityComp"
+import { useContext } from "react"
+import { DataContext } from "./dataContext"
 
-export default function Card({item, cartData, setCartData}) {
-   
+export default function Card({item}) {
+
+   const {cartData} = useContext(DataContext)
+
     return (
         <div className="card-container grid-item">
             <div className="card-main-info">
@@ -12,16 +16,10 @@ export default function Card({item, cartData, setCartData}) {
                     <img src= {`${item.image.mobile}`} alt="food" className={`img card-main-img  ${cartData[item.name].count !== 0 && 'border-red'}`} />
                 </picture>
                 <div className="btn-container">
-                   {cartData[item.name].count !== 0 ? <ProductsQuantityComp 
-                                cartData={cartData}
-                                setCartData={setCartData}
-                                dataName = {item.name}
-                                />
+                   {cartData[item.name].count !== 0 ? 
+                                <ProductsQuantityComp dataName = {item.name}/>
                                 : 
-                                <AddToCartButton 
-                                    cartData={cartData}
-                                    setCartData={setCartData}
-                                    dataName = {item.name}
+                                <AddToCartButton dataName = {item.name}
                                 />
                     }     
                 </div>

@@ -1,6 +1,11 @@
 import CartItem from "./CartItem"
+import { useContext } from "react"
+import { DataContext } from "./dataContext"
 
-export default function CartItems({cartData, setCartData, dialogFunc, orderConfirmed}) {
+export default function CartItems({ dialogFunc, orderConfirmed}) {
+
+    const {cartData, setCartData} = useContext(DataContext)
+
     const totalPrice = Object.keys(cartData).map(key => cartData[key].count*cartData[key].price).reduce((a,b) => a + b)
      return (
         <>

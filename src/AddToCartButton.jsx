@@ -1,6 +1,10 @@
+import { useContext } from "react"
+import { DataContext } from "./dataContext"
 
+export default function AddToCartButton({dataName}) {
 
-export default function AddToCartButton({cartData, setCartData, dataName}) {
+    const {cartData, setCartData} = useContext(DataContext)
+
     function handleClick(){
         const newCartData = {...cartData}
         newCartData[dataName].count = 1
