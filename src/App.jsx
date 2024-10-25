@@ -21,6 +21,9 @@ function App() {
 
   function closeDialog() {
     dialogRef.current.close()
+    let newCartData = {...cartData}
+    Object.keys(newCartData).forEach(key => newCartData[key].count = 0)
+    setCartData(newCartData)
   }
 
   return (
