@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](hhttps://github.com/dimitrisdr/product-list-with-cart-react.git)
+- Solution URL: [Add solution URL here](https://github.com/dimitrisdr/product-list-with-cart-react.git)
 - Live Site URL: [Add live site URL here](https://dimitrisdr.github.io/product-list-with-cart-react/)
 
 ## My process
