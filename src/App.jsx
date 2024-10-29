@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useRef } from "react"
 import { DataContext } from './dataContext.js'
 const startData = {}
-data.forEach(el => startData[el.name] = {count:0, price:el.price})
+data.forEach(el => startData[el.name] = {count:0, price:el.price, img:el.image.thumbnail})
 
 function App() {
 
