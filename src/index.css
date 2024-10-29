@@ -86,11 +86,11 @@ body {
 }
 
 .fs-700 {
-  font-size: clamp(1.25rem, 0.3rem + 1.5vw, 2.2rem);
+  font-size: clamp(1.25rem, 0.3rem + 1.5vw, 2rem);
 }
 
 .fs-900 {
-  font-size: clamp(1.8rem, 0.4rem + 4vw, 3.2rem);
+  font-size: clamp(1.8rem, 0.4rem + 3vw, 2.7rem);
 }
 
 
