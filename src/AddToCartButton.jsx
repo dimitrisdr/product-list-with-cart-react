@@ -17,7 +17,7 @@ export default function AddToCartButton({dataName}) {
             onClick={handleClick}
             data-name={dataName}
         >
-            <img src="public\assets\images\icon-add-to-cart.svg" alt="cart" className="img btn-img" />
+            <img src="/product-list-with-cart-react/assets/images/icon-add-to-cart.svg" alt="cart" className="img btn-img" />
             <span className="btn-text fw-600 clr-rose-900">Add to Cart</span>
         </button>
     )

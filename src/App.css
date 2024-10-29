@@ -83,6 +83,7 @@
 
 .cart-empty {
   align-self: center;
+
 }
 
 .cart-empty-img {
@@ -181,7 +182,11 @@
   }
 
   #root {
-    grid-template-columns: 1fr 24rem;
+    grid-template-columns: 1fr 25rem;
+  }
+
+  .cart-container {
+    min-width: 20rem;
   }
 
   .cards-container {

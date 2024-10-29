@@ -21,12 +21,12 @@ export default function ProductsQuantityComp({dataName}) {
              id="decr"
              onClick={handleClick}
              >
-            <img src="public/assets/images/icon-decrement-quantity.svg" alt="remove" className="img" />
+            <img src="/product-list-with-cart-react/assets/images/icon-decrement-quantity.svg" alt="remove" className="img" />
             </button>
             <span className="quantity clr-rose-50">{cartData[dataName].count}</span>
             <button 
              className="incr-button add-btn" id="incr" onClick={handleClick}>
-                <img src="public\assets\images\icon-increment-quantity.svg" alt="add" className="img" />
+                <img src="/product-list-with-cart-react/assets/images/icon-increment-quantity.svg" alt="add" className="img" />
             </button>
         </div>
     )

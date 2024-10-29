@@ -23,7 +23,7 @@ export default function CartItems({ dialogFunc, orderConfirmed}) {
                     orderConfirmed
                     &&
                     <div className="carbon-free-msg flex-item">
-                        <img src="public\assets\images\icon-carbon-neutral.svg" alt="carbon free icon" className="img" />
+                        <img src="/product-list-with-cart-react/assets/images/icon-carbon-neutral.svg" alt="carbon free icon" className="img" />
                         <p className="carbon-free-msg-txt clr-rose-500">This is a <strong>carbon-neutral</strong> delivery</p>
                     </div>
                 }

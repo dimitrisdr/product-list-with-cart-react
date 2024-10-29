@@ -30,7 +30,7 @@ export default function CartItem({itemName, orderConfirmed}) {
             {
                 orderConfirmed ?             
                 <button className="close-icon-btn grid-item" onClick={handleClick}>
-                    <img src="public\assets\images\icon-remove-item.svg" alt="close icon" className="img close-icon-img" />
+                    <img src="/product-list-with-cart-react/assets/images/icon-remove-item.svg" alt="close icon" className="img close-icon-img" />
                 </button>
                 :
                 <span className="price-total clr-rose-900 fw-700">${price * count}</span>
