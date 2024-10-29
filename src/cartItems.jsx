@@ -13,11 +13,7 @@ export default function CartItems({ dialogFunc, orderConfirmed}) {
                 <div className="cart-items">
                     {Object.keys(cartData).map(key => {
                         if (cartData[key].count === 0) return
-                        return <CartItem key={key}
-                                         itemName={key} 
-                                         orderConfirmed={orderConfirmed}
-                        />
-                    })}
+                        return <CartItem key={key} itemName={key} orderConfirmed={orderConfirmed} /> })}
                 </div>
                 <div className="order-total flex-item">
                     <span className="order-total-txt clr-rose-500">Order Total</span>

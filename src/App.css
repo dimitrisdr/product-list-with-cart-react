@@ -39,6 +39,7 @@
   align-self: flex-start;
   min-height: 50vh;
   align-content: flex-start;
+  margin-inline: auto;
 }
 
 .cart-btn, .products-quantity {
@@ -105,6 +106,8 @@
   place-items: center;
   border: 1px solid var(--Rose-300);
   border-radius:50%;
+  display: grid;
+  place-items: center;
 }
 
 .confirm-order-btn, .close-btn {
